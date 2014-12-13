@@ -57,4 +57,4 @@ names(data_final) <- gsub("body", "body_", names(data_final))
 
 by_act_sub<-group_by(data_final, activity, subject)#group the data by activity and subject
 tidy<-summarise_each(by_act_sub,funs(mean))# mean for each column
-write.table(tidy, file="tidy_means.txt",sep="\t", row.names = FALSE)
+write.table(tidy, file="tidy.txt",sep="\t", row.names = FALSE)
